@@ -1,0 +1,48 @@
+﻿@model IEnumerable<EventManagementSystem.Models.Event>
+
+<link rel="stylesheet" href="/css/site.css" />
+
+<form class="d-flex flex-row" method="get">
+	<label for="searchDate">Date:</label>
+	<input class="form-control shadow-none w-25" type="date" name="date" />
+	<label for="searchLocation">Location:</label>
+	<input class="form-control shadow-none w-25" type="text" name="location" />
+	<button type="submit" class="btn btn-light">Filter</button>
+	</form>
+<body class="print">
+	<div class="table mt-3">
+		<h3 class="text-center mb-4">Event List</h3>
+		<table class="table-bordered table table-hover">
+			<thead class="text-white-50 bg-dark text-center">
+				<tr>
+					<th>Id</th>
+					<th>Name</th>
+					<th>Date</th>
+					<th>Description</th>
+					<th>Location</th>
+					<th>Available Seats</th>
+					<th>Details</th>
+					
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var item in Model)
+				{
+					<tr>
+						<td>@item.Id</td>
+						<td>@item.Name</td>
+						<td>@item.Date.ToString("MMMM dd, yyyy")</td>
+						<td>@item.Description</td>
+						<td>@item.Location</td>
+						<td>@item.AvailableSeats</td>
+						<td>
+							<a href="/Event/EventDetails?id=@item.Id">View Details</a>
+						</td>
+						
+					</tr>
+				}
+			</tbody>
+		</table>
+		
+	</div>
+</body>

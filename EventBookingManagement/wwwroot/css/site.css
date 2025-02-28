@@ -1,0 +1,74 @@
+
+*{
+    margin:0;
+    padding:0;
+}
+.print {
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+.table
+{
+
+}
+.root {
+    width: 300px;
+    height: 320px;
+    background-color: #76ABDF;
+    /*    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);*/
+    border: 3px solid #7CB9E8;
+    padding: 10px;
+    border-radius: 25px;
+}
+h5{
+    font-family: "Vollkorn", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+
+.root {
+    margin :0 auto;
+}
+.user{
+    margin:0 auto;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+}
+.login {
+    background-color: #6CB4EE;
+}
+
+h3,tr,label{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+p,h1{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+.createaccount {
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+}
+.create {
+    margin:0 auto;
+    width: 320px;
+    height: 300px;
+    background-color: #D9AFD9;
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+    border-radius: 20px;
+}
+.input-icon .fa-solid {
+    position: absolute;
+    padding: 10px;
+    min-width: 10px;
+    color: lightslategrey;
+    /*    background-color:black;*/
+}

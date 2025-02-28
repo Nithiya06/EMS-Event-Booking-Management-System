@@ -1,0 +1,9 @@
+﻿@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+<div>
+    <a href="/Event/ShowUsers" class="btn btn-primary">Back to Event</a>
+</div>

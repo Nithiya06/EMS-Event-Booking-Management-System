@@ -1,0 +1,35 @@
+﻿@model EventManagementSystem.Models.Users;
+<body class="createaccount">
+<div class="create">
+	<link rel="stylesheet" href="/css/site.css" />
+	<div class="d-flex flex-column align-items-center">
+
+		<h3 class="mb-3 text-blue">Create account</h3>
+		<form method="post" class="inline">
+
+			<div class="input-icon">
+				<i class="fa-solid fa-user"></i>
+				<input class="form-control mb-3 shadow-none" type="text" asp-for="Name" />
+				<span class="text-danger" asp-validation-for="Name"></span>
+			</div>
+			<div class="input-icon">
+				<i class="fa-solid fa-envelope"></i>
+				<input class="form-control mb-3 shadow-none" type="text" asp-for="Email" />
+				<span class="text-danger" asp-validation-for="Email"></span>
+			</div>
+			<div class="input-icon">
+				<i class="fa-solid fa-lock"></i>
+				<input class="form-control mb-3 shadow-none" type="password" asp-for="Password" />
+				<span class="text-danger" asp-validation-for="Password"></span>
+			</div>
+			<div class="">
+				<button class="btn btn-success ">Create</button>
+				<a href="/Users/Login" class="btn btn-success ">login</a>
+			</div>
+
+
+		</form>
+	</div>
+</div>
+
+</body>

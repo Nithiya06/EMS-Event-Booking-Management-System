@@ -1,0 +1,36 @@
+﻿<link rel="stylesheet" href="/css/site.css" />
+<body class="print">
+	<div class="table">
+		<h3 class="text-center mb-4">Lists of Users</h3>
+		<table class="table-bordered table table-hover">
+			<thead class="text-white-50 bg-dark text-center">
+				<tr>
+					<th>UserId</th>
+					<th>UserName</th>
+					<th>UserEmail</th>
+					<th>EventName</th>
+					<th>No.Of Tickets Booked</th>
+					<th>TotalPrice</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var booking in Model)
+				{
+					<tr>
+						<td>@booking.UserName</td>  <!-- Use UserName directly -->
+						<td>@booking.UserEmail</td> <!-- Use UserEmail directly -->
+						<td>@booking.EventName</td> <!-- Use EventName -->
+						<td>@booking.TicketCount</td> <!-- Use TicketCount -->
+						<td>@booking.TotalPrice</td> <!-- Use TotalPrice -->
+						<td class="d-flex flex-row gap-3">
+							<a href="#" class="btn btn-info">View Details</a>
+							<a href="#" class="btn btn-danger">Cancel</a>
+						</td>
+					</tr>
+				}
+						
+		</tbody>
+		</table>
+	</div>
+</body>  

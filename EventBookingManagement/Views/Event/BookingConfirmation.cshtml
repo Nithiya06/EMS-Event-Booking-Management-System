@@ -1,0 +1,31 @@
+﻿@model EventManagementSystem.Models.BookingConfirmation
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-center align-items-center">
+    <div class="bg-light p-4 rounded shadow-sm">
+        <h3 class="text-center">Booking Confirmation Details</h3>
+
+        <div class="row mb-3">
+            <div class="col-md-8">
+                <p><strong>Event Name:</strong> @Model.EventName</p>
+                <p><strong>Event Date:</strong> @Model.EventDate.ToString("MMMM dd, yyyy")</p>
+            </div>
+            <div class="col-md-6">
+                <p><strong>Number of Tickets:</strong> @Model.TicketCount</p>
+                <p><strong>Total Amount:</strong> $@Model.TotalPrice.ToString("0.00")</p> <!-- Assuming currency -->
+            </div>
+        </div>
+        
+        <div class="text-center">
+            <form asp-action="BookingConfirmation" method="post">
+                <input type="hidden" name="id" value="@Model.Id" />
+                <input type="hidden" name="ticketCount" value="@Model.TicketCount" />
+                <input type="hidden" name="totalPrice" value="@Model.TotalPrice" />
+
+                <button type= class="btn btn-success">Pay Now</button>
+                <a href="@Url.Action("Show", "Event")" class="btn btn-danger ms-3" onclick="return confirm('Are you sure you want to cancel your booking?');">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,21 @@
+﻿@model EventManagementSystem.Models.Event
+<div class="bg-light">
+<h1>Event Details</h1>
+<p><strong>Name:</strong> @Model.Name</p>
+    <p><strong>Date:</strong> @Model.Date.ToString("MMMM dd, yyyy")</p>
+<p><strong>Description:</strong> @Model.Description</p>
+<p><strong>Price:</strong> @Model.Price</p>
+<p><strong>Time:</strong> @Model.Time</p>
+<p><strong>Available Seats:</strong> @Model.AvailableSeats</p>
+</div>
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+}
+<form asp-action="BookTickets" method="post">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <label for="ticketCount"><strong>Number of Tickets:</strong></label>
+    <input class="form-control shadow-none w-50 mb-2"type="number" name="ticketCount" min="1" max="@Model.AvailableSeats" required />
+     <button class="btn btn-primary">Book Now</button> 
+</form>
+

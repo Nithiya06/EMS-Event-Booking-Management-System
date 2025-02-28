@@ -1,0 +1,21 @@
+﻿@model EventManagementSystem.Models.Users
+<body class="login">
+		<div class="root">
+		<div class="d-flex flex-column align-items-center">
+		<h3>Hello</h3>
+		<h5>Sign into your account</h5>
+		<form method="post">
+			<div class="input-icon">
+				<i class="fa-solid fa-user"></i>
+					<input class="form-control mb-3 shadow-none rounded-pill" type="text" asp-for="Email" />
+			</div>
+			<div class="input-icon">
+				<i class="fa-solid fa-lock"></i>
+					<input class="form-control mb-3 shadow-none rounded-pill" type="password" asp-for="Password" />
+			</div>
+				<button class="btn btn-info w-100 rounded-pill mb-3">Sign in</button>
+			<p>Don't have an account <a href="/Users/Create">create</a></p>
+		</form>
+	</div>
+</div>
+</body>

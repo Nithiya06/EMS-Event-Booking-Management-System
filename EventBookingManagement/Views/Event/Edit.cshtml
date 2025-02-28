@@ -1,0 +1,49 @@
+﻿@model EventManagementSystem.Models.Event
+
+<h2>Create Event</h2>
+
+<form method="post" class="form-horizontal">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input type="hidden" asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description" class="control-label"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Date" class="control-label"></label>
+        <input type="date" asp-for="Date" class="form-control" />
+        <span asp-validation-for="Date" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Location" class="control-label"></label>
+        <input type="text" asp-for="Location" class="form-control" />
+        <span asp-validation-for="Location" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Price" class="control-label"></label>
+        <input type="number" asp-for="Price" class="form-control" type="number" step="0.01" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AvailableSeats" class="control-label"></label>
+        <input type="number" asp-for="AvailableSeats" class="form-control" type="number" />
+        <span asp-validation-for="AvailableSeats" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update Event</button>
+</form>
+
+<div>
+    <a href="@Url.Action("Show", "Event")">Back to Events</a>
+</div>
+
+
